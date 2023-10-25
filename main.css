@@ -21,9 +21,12 @@ ul {
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.logo {}
+.logo {
+  display: flex;
+}
 
 h1 {
   font-size: 42px;
