@@ -49,6 +49,8 @@ h1 {
   background-color: #44403c;
   margin-bottom: 16px;
   padding: 16px 24px;
+
+  display: flex;
 }
 
 .tag {
