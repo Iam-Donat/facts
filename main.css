@@ -85,4 +85,7 @@ h1 {
   padding-right: 10px;
 }
 
-.source {}
+.source:link,
+.source:visited {
+  color: #a8a29e;
+}
