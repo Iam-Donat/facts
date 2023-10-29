@@ -36,12 +36,17 @@ h1 {
   text-transform: uppercase;
   font-size: 17px;
 
-  color: inherit;
-
   padding: 16px 0 13px;
 
+  color: inherit;
   background: linear-gradient(135deg,
       #3b82f6, #ef4444, #16a34a, #eab308);
+
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
 }
 
 .btn-large {
@@ -82,6 +87,10 @@ h1 {
   gap: 48px;
 }
 
+.category {
+  margin-bottom: 16px;
+}
+
 .btn__all-categories {
   /* aside categories btn */
   margin-bottom: 16px;
@@ -90,6 +99,7 @@ h1 {
 
 .btn__category {
   width: 100%;
+  background-image: none;
 }
 
 .fact {
