@@ -22,11 +22,34 @@ h1 {
   line-height: 1;
 }
 
+/* --- Components --- */
 .container {
-  max-width: 840px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
+.btn {
+  border: none;
+
+  font-family: 'Coiny', sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+
+  color: inherit;
+
+  padding: 16px 0 13px;
+
+  background: linear-gradient(135deg,
+      #3b82f6, #ef4444, #16a34a, #eab308);
+}
+
+.btn-large {
+  font-size: 30px;
+}
+
+
+/* --- elements class --- */
 .header {
   margin-bottom: 40px;
   padding: 10px;
