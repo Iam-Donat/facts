@@ -30,6 +30,7 @@ h1 {
 
 .btn {
   border: none;
+  border-radius: 100px;
 
   font-family: 'Coiny', sans-serif;
   line-height: 1;
@@ -43,6 +44,8 @@ h1 {
       #3b82f6, #ef4444, #16a34a, #eab308);
 
   transition: .3s;
+
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -115,15 +118,12 @@ h1 {
   gap: 24px;
 }
 
-.vote-btn {
-  margin-left: auto;
-}
-
 .tag {
   text-transform: uppercase;
   font-size: 14px;
   font-family: 'Coiny', sans-serif;
   padding: 10px 10px 7px;
+  border-radius: 100px;
 }
 
 .source:link,
@@ -137,4 +137,8 @@ h1 {
 .source:hover,
 .source:active {
   color: #3b82f6;
+}
+
+.vote-btn {
+  margin-left: auto;
 }
