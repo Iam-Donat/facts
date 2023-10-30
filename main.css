@@ -24,7 +24,7 @@ h1 {
 
 /* --- Components --- */
 .container {
-  max-width: 1500px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -86,6 +86,8 @@ h1 {
   display: flex;
   align-items: center;
   gap: 16px;
+
+  border-radius: 16px;
 }
 
 .fact-form input,
@@ -147,13 +149,15 @@ h1 {
   display: flex;
   align-items: center;
   gap: 24px;
+
+  border-radius: 16px;
 }
 
 .tag {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Coiny', sans-serif;
-  padding: 10px 10px 7px;
+  padding: 8px 10px 5px;
   border-radius: 100px;
 }
 
@@ -199,4 +203,34 @@ h1 {
 
 .vote-btn button:active {
   transform: scale(.9);
+}
+
+/* --- media queries --- */
+
+@media (max-width: 1080px) {
+  body {
+    padding: 32px 48px;
+  }
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 930px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }
