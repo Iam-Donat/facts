@@ -57,6 +57,10 @@ h1 {
   padding: 20px 32px 17px;
 }
 
+.hidden {
+  display: none;
+}
+
 /* --- elements class --- */
 .header {
   margin-bottom: 40px;
