@@ -1,5 +1,8 @@
 const openBtn = document.querySelector('#btn__open');
 const form = document.querySelector('.fact-form');
+const factsList = document.querySelector('.fact-list');
+
+factsList.innerHTML = '';
 
 openBtn.addEventListener('click', () => {
   if (form.classList.contains('hidden')) {
