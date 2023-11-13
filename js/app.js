@@ -1,6 +1,6 @@
 const openBtn = document.querySelector('#btn__open');
 const form = document.querySelector('.fact-form');
-const factsList = document.querySelector('.fact-list');
+const factsList = document.querySelector('.facts-list');
 
 factsList.innerHTML = '';
 
