@@ -40,25 +40,29 @@ const factsList = document.querySelector('.facts-list');
 // Create DOM Element: Render facts in the list
 factsList.innerHTML = '';
 
-const htmlArr = initialFacts.map(
-  fact => `<li class='fact'>
-    <p>
-      ${fact.text}
-      <a
-        class="source"
-        href="${fact.source}"
-        target="_blank">(source)
-      </a>
-    </p>
-    <span
-      class="tag"
-      style="background-color: #eab308">${fact.category}
-    </span>
-  </li>`
-);
-// console.log(htmlArr);
 const html = htmlArr.join('');
 factsList.insertAdjacentHTML('afterbegin', html);
+
+function createFactsList(dataArray) {
+  const htmlArr = dataArray.map(
+    fact => `<li class='fact'>
+      <p>
+        ${fact.text}
+        <a
+          class="source"
+          href="${fact.source}"
+          target="_blank">(source)
+        </a>
+      </p>
+      <span
+        class="tag"
+        style="background-color: #eab308">${fact.category}
+      </span>
+    </li>`
+  );
+}
+// Calling the createFactsList fn
+createFactsList(initialFacts);
 
 // Toggle form visibility
 openBtn.addEventListener('click', () => {
