@@ -41,11 +41,24 @@ const factsList = document.querySelector('.facts-list');
 factsList.innerHTML = '';
 
 const htmlArr = initialFacts.map(
-  fact => `<li class='fact'>${fact.text}</li>`
+  fact => `<li class='fact'>
+    <p>
+      ${fact.text}
+      <a
+        class="source"
+        href="${fact.source}"
+        target="_blank">(source)
+      </a>
+    </p>
+    <span
+      class="tag"
+      style="background-color: #eab308">${fact.category}
+    </span>
+  </li>`
 );
 // console.log(htmlArr);
 const html = htmlArr.join('');
-factsList.insertAdjacentHTML('afterend', html);
+factsList.insertAdjacentHTML('afterbegin', html);
 
 // Toggle form visibility
 openBtn.addEventListener('click', () => {
