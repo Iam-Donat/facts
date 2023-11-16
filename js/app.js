@@ -39,7 +39,13 @@ const factsList = document.querySelector('.facts-list');
 
 // Create DOM Element: Render facts in the list
 factsList.innerHTML = '';
-// create
+// Load Data from Supabase
+fetch('https://ttheqqcsoblxurimffeq.supabase.co', {
+  headers: {
+    apiKey: '',
+  }
+})
+// create list of facts fn
 createFactsList(initialFacts)
 
 function createFactsList(dataArray) {
