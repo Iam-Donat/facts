@@ -40,16 +40,18 @@ const factsList = document.querySelector('.facts-list');
 // Create DOM Element: Render facts in the list
 factsList.innerHTML = '';
 // Load Data from Supabase
-const res = fetch('https://ttheqqcsoblxurimffeq.supabase.co/rest/v1/facts', {
-  headers: {
-    apiKey:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR0aGVxcWNzb2JseHVyaW1mZmVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg2NjMxNzAsImV4cCI6MjAxNDIzOTE3MH0._bChb4kOsuCwGwHRdrq8kv1SyuRctjPd4yVECg84OxI',
-    authorization:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR0aGVxcWNzb2JseHVyaW1mZmVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg2NjMxNzAsImV4cCI6MjAxNDIzOTE3MH0._bChb4kOsuCwGwHRdrq8kv1SyuRctjPd4yVECg84OxI',
-  },
-});
+async function loadFacts() {
+  const res = fetch('https://ttheqqcsoblxurimffeq.supabase.co/rest/v1/facts', {
+    headers: {
+      apiKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR0aGVxcWNzb2JseHVyaW1mZmVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg2NjMxNzAsImV4cCI6MjAxNDIzOTE3MH0._bChb4kOsuCwGwHRdrq8kv1SyuRctjPd4yVECg84OxI',
+      authorization:
+        'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR0aGVxcWNzb2JseHVyaW1mZmVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg2NjMxNzAsImV4cCI6MjAxNDIzOTE3MH0._bChb4kOsuCwGwHRdrq8kv1SyuRctjPd4yVECg84OxI',
+    },
+  });
 
-console.log(res);
+  console.log(res);
+}
 // create list of facts fn
 // createFactsList(initialFacts)
 
