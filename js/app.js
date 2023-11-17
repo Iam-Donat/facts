@@ -50,8 +50,10 @@ async function loadFacts() {
       authorization:
         'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR0aGVxcWNzb2JseHVyaW1mZmVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg2NjMxNzAsImV4cCI6MjAxNDIzOTE3MH0._bChb4kOsuCwGwHRdrq8kv1SyuRctjPd4yVECg84OxI',
     },
-  });
-  console.log(res);
+  }
+  );
+  const data = await res.json();
+  console.log(data);
 }
 
 // create list of facts fn
