@@ -65,7 +65,7 @@ async function loadFacts() {
   );
   const data = await res.json();
 
-  console.log(data);
+  // console.log(data);
 
   // create list of facts fn
   createFactsList(data)
