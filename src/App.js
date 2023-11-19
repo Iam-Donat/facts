@@ -19,8 +19,11 @@ function App() {
       </header>
 
       <NewFactForm />
-      <CategoryFilter />
-      {/* <FactList /> */}
+
+      <main className='main'>
+        <CategoryFilter />
+        <FactList />
+      </main>
     </>
   );
 }
@@ -34,7 +37,7 @@ function CategoryFilter() {
 }
 
 function FactList() {
-  return;
+  return <section>Fact List</section>;
 }
 
 export default App;
