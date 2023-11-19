@@ -1,21 +1,40 @@
 import './main.css';
 
+// < !---------------- component start ---------------->
 function App() {
   return (
-    // < !----------------header start---------------->
-    <header className="header">
-      <div className="logo">
-        <img
-          src="/logo.png"
-          alt="logo"
-        />
-        <h1>Today's Facts 📌</h1>
-      </div>
+    // JSX fragment
+    <>
+      {/* Headers*/}
+      <header className="header">
+        <div className="logo">
+          <img
+            src="/logo.png"
+            alt="logo"
+          />
+          <h1>Today's Facts 📌</h1>
+        </div>
 
-      <button id="btn__open" className="btn btn-large">Share a fact</button>
-    </header>
-    // <!----------------header end---------------->
+        <button id="btn__open" className="btn btn-large">Share a fact</button>
+      </header>
+
+      <NewFactForm />
+      <CategoryFilter />
+      {/* <FactList /> */}
+    </>
   );
+}
+// <!----------------component end---------------->
+
+function NewFactForm() {
+  return <form className='fact-form'>Fact Form</form>
+}
+function CategoryFilter() {
+  return <aside>category Filter</aside>;
+}
+
+function FactList() {
+  return;
 }
 
 export default App;
