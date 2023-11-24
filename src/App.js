@@ -96,6 +96,7 @@ function FactList() {
 
 // Props
 function Fact(props) {
+  const { factObj } = props;
 
   return (
     <li key={props.factObj.id} className='fact'>
