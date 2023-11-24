@@ -96,29 +96,32 @@ function FactList() {
 
 // Props
 function Fact(props) {
-  return <li key={fact.id} className='fact'>
-    <p>
-      {fact.text}
-      <a
-        className="source"
-        href={fact.source}
-        target="_blank"
-        rel='noreferrer'>(source)
-      </a>
-    </p>
-    <span
-      className="tag"
-      style={{
-        backgroundColor: CATEGORIES.find(
-          cat => cat.name === fact.category).color
-      }}>
-      {fact.category}
-    </span>
-    <div className="vote-btn">
-      <button>👍 {fact.votesInteresting}</button>
-      <button>🤯 {fact.votesMindblowing}</button>
-      <button>⛔️ {fact.votesFalse}</button>
-    </div>
-  </li>
+
+  return (
+    <li key={props.factObj.id} className='fact'>
+      <p>
+        {fact.text}
+        <a
+          className="source"
+          href={fact.source}
+          target="_blank"
+          rel='noreferrer'>(source)
+        </a>
+      </p>
+      <span
+        className="tag"
+        style={{
+          backgroundColor: CATEGORIES.find(
+            cat => cat.name === fact.category).color
+        }}>
+        {fact.category}
+      </span>
+      <div className="vote-btn">
+        <button>👍 {fact.votesInteresting}</button>
+        <button>🤯 {fact.votesMindblowing}</button>
+        <button>⛔️ {fact.votesFalse}</button>
+      </div>
+    </li>
+  )
 };
 export default App;
