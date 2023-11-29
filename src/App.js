@@ -43,6 +43,16 @@ const initialFacts = [
     votesFalse: 1,
     createdIn: 2015,
   },
+  {
+    id: 4,
+    text: "The world's largest food market is in France",
+    source: "https://en.wikipedia.org/wiki/World_Food_Market",
+    category: "society",
+    votesInteresting: 7,
+    votesMindblowing: 2,
+    votesFalse: 1,
+    createdIn: 2015,
+  }
 ];
 
 // < !---------------- component start ---------------->
@@ -85,18 +95,23 @@ function FactList() {
   // Temporary
   const facts = initialFacts;
 
-  return <section>
-    <ul className='facts-list'>
-      {facts.map((fact) =>
-        <Fact key={fact.id} fact={fact} />
-      )}
-    </ul>
-  </section >;
+  return (
+    <section>
+      <ul className='facts-list'>
+        {facts.map((fact) =>
+          <Fact key={fact.id} fact={fact} />
+        )}
+      </ul>
+      <p>
+        There are {facts.length} facts in the database. Add your own!
+      </p>
+    </section >
+  );
+
 }
 
 // Props
 function Fact({ fact }) {
-
   return (
     <li key={fact.id} className='fact'>
       <p>
